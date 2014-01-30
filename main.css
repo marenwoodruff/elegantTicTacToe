@@ -1,0 +1,93 @@
+body {
+	font-family: 'Italianno', Helvetica;
+	background-color: black;
+}
+
+h1 {
+	text-align: center;
+	font-size: 90px;
+	color: #A0A0A0;
+	margin-bottom: 20px;
+}
+
+.main {
+	width: 400px;
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.board {
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	border: 3px solid #606060;
+	float: left;
+	margin: 5px;
+	background-color: #990000;
+	text-align: center; 
+	font-family: 'Italianno', Helvetica;
+	font-size: 90px;
+	font-weight: bold;
+}
+
+.board:hover {
+	background-color: #550000;
+}
+
+
+/*@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+
+/*#image {
+  	animation-name: spin;
+  	animation-duration: 3s;
+  	animation-iteration-count: 10;
+}*/
+
+input[type="button"] {
+	font-family: 'Italianno', Helvetica;
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+	height: 40px;
+	width: 150px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	float: right;
+	margin-right: -180px;
+	margin-top: 10px;
+}
+
+input.button:hover {
+	background-color: #660000;
+}
+
+.popup {
+	width: 345px;
+	height: 239px;
+	margin: 0 auto;
+	float: left;
+	background-color: #770000;
+	font-weight: bold;
+	padding-top: 100px;
+	position: absolute;
+	font-size: 45px;
+	border-radius: 25px;
+}
+
+@media(max-width: 500px) {
+	h1 {
+		font-size: 27px;
+	}
+
+	.board {
+		height: 50px;
+		width: 50px;
+	}
+}
+
+

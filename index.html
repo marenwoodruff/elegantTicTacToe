@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+
+	<title>
+		Tic Tac Toe Draft
+	</title>
+
+</head>
+
+<body>
+	<header><h1><u>Noughts and Crosses</u></h1></header>
+	<br />
+
+
+		<div class="main" x-ng-app="TicTac" x-ng-controller="TicTacCtrl">
+
+			<div class="board"
+				x-ng-repeat="x in obj.board track by $index"
+				x-ng-class="{clear:$index % 3 == 0, cell: true, x: x == 'X', o: x == 'O'}"
+				x-ng-click="makeMove($index)">
+				{{x}}
+			</div>
+
+
+			<input type="button" class="button" value="New Game" x-ng-click="reset()" />
+
+			<div class="popup" x-ng-show="xWinMessage.val">
+				{{xWinMessage.message}}
+			</div>
+
+			<div class="popup" x-ng-show="oWinMessage.val">
+				{{oWinMessage.message}}
+			</div>
+
+			<div class="popup" x-ng-show="catsGame.val">
+				{{catsGame.message}}
+			</div>
+		</div>
+	
+	<br />
+
+	<br />
+	
+
+	<script type="text/javascript" src="main.js"></script>
+	
+
+</body>
+
+</html>
+
+
